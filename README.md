@@ -1,0 +1,2 @@
+# riccoASP.netCore-Email
+example
