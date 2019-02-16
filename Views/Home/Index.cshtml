@@ -1,0 +1,65 @@
+﻿
+@model MailModel
+@{
+    //ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="test">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SMTP_HOST" class="control-label"></label>
+                <input asp-for="SMTP_HOST" class="form-control" />
+                <span asp-validation-for="SMTP_HOST" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SMTP_PORT" class="control-label"></label>
+                <input asp-for="SMTP_PORT" class="form-control" />
+                <span asp-validation-for="SMTP_PORT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountName" class="control-label"></label>
+                <input asp-for="AccountName" class="form-control" />
+                <span asp-validation-for="AccountName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountPassword" class="control-label"></label>
+                <input asp-for="AccountPassword" class="form-control" />
+                <span asp-validation-for="AccountPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MessageBody" class="control-label"></label>
+                <input asp-for="MessageBody" class="form-control" />
+                <span asp-validation-for="MessageBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MessageSubject" class="control-label"></label>
+                <input asp-for="MessageSubject" class="form-control" />
+                <span asp-validation-for="MessageSubject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToAddress" class="control-label"></label>
+                <input asp-for="ToAddress" class="form-control" />
+                <span asp-validation-for="ToAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FromAddress" class="control-label"></label>
+                <input asp-for="FromAddress" class="form-control" />
+                <span asp-validation-for="FromAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Send Email" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
